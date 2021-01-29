@@ -7,22 +7,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap" rel="stylesheet">  
+     
     <title>FoodFinder</title>
 </head>
 
 <body>
-    <div class="bg-image"></div>
-    
+
     <!-- bootstrap navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-
-            <a class="navbar-brand" href="restaurants.html">Restaurants</a>
-            <a class="navbar-brand" href="index.html" style="text-align: center; margin-left: 20%;">FeedMe</a>
+            <a href="restaurants.html"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+              </svg></a>
+            <a class="navbar-brand" href="index.html" style="font-size:40px; text-align: center; margin-left: 20%;">FeedMe</a>
             <form class="d-flex">
-                <div>
-                    know what you want?
-                </div>
+                <div style="text-align: center; margin-right: 5px">Do know what you want?</div>
                 <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit"><i>GO!</i></button>
             </form>
@@ -30,16 +32,15 @@
     </nav>
     <!-- navbar end-->
 
-    <div class="container-lg">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-8 start">
                 <div class="centerStart" style="text-align: center;">
 
                     <!--zipcode form-->
-
                     <form action="submit" class="zipCodeForm">
-                        <p>to start please enter your ZIP code below.</p>
+                        <p>To start please enter your ZIP code below.</p>
                         <input type="text" placeholder="Enter ZIP code here"></input>
                         <button>Submit</button>
                     </form>
@@ -60,7 +61,7 @@
                         <button>Azerbaijani</button>
                     </div>
                 </div>
-                <a class="noneOption" style="margin-left:85%">none of these >></a>
+                <button class="noneOption" style="text-align: right;">none of these >></button>
             </div>
             <div class="col-lg-2"></div>
         </div>

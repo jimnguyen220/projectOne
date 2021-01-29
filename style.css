@@ -3,19 +3,18 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    font-family: 'Lobster', cursive;
 }
 
-
 .start {
-    border: 1px black solid;
+    border: 1px black double;
     padding: 10px;
     margin: 30px;
     margin-top: 10%;
     border-radius: 10px;
-    background-color: rgb(247, 80, 80);
+    background-color: rgba(247, 80, 80, 0.849);
     color: rgb(224, 224, 224);
-    
+    font-family: 'Montserrat', sans-serif;
 }
 
 .starterTag {
@@ -24,10 +23,11 @@ body {
 
 button {
     margin: 4px;
+    border-radius: 7px;
 }
 
 button:hover {
-    background-color: rgb(168, 168, 255);
+    background-color: rgb(208, 208, 255);
 }
 
 .buttonsDiv {
