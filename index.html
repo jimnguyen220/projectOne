@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>FoodFinder</title>
 </head>
-<body>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<body>
+    <!-- bootstrap navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="restaurants.html">Restaurants</a>
+            <a class="navbar-brand" href="index.html" style="text-align: center; margin-left: 23%;">FeedMe</a>
+            <form class="d-flex">
+                <div>
+                    know what you want?
+                </div>
+                <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"><i>GO!</i></button>
+            </form>
+        </div>
+    </nav>
+    <!-- navbar end-->
+
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 start">
+                <div class="centerStart" style="text-align: center;">
+
+                    <!--zipcode form-->
+
+                    <form action="submit" class="zipCodeForm">
+                        <p>to start please enter your ZIP code below.</p>
+                        <input type="text" placeholder="Enter ZIP code here"></input>
+                        <button>Submit</button>
+                    </form>
+
+                    <!--buttons for choosing the food genre-->
+                    <div class="starterTag">
+                        Let's get you started!<br>
+                        Which of these sound good to you?<br>
+                    </div>
+                    <div class="buttonsDiv">
+                        <button>Spanish</button>
+                        <button>Italian</button>
+                        <button>Chinese</button>
+                        <button>Indian</button>
+                        <button>Thai</button>
+                        <button>Japanese</button>
+                        <button>Korean</button>
+                        <button>Azerbaijani</button>
+                    </div>
+                </div>
+                <a class="noneOption" style="margin-left:85%">none of these >></a>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="java.js"></script>
 </body>
+
 </html>
