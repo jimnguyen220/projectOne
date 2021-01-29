@@ -11,206 +11,185 @@
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <title>FoodFinder</title>
-    </head>
+    <!-- bootstrap navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
 
-    <body>
-        <!-- bootstrap navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Home</a>
-                <a class="navbar-brand" href="index.html" style="text-align: center; margin-left: 23%;">FeedMe</a>
-                <form class="d-flex">
-                    <div>
-                        know what you want?
-                    </div>
-                    <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i>GO!</i></button>
-                </form>
-            </div>
-        </nav>
-        <!-- navbar end-->
+            <a class="navbar-brand" href="restaurants.html">Restaurants</a>
+            <a class="navbar-brand" href="index.html" style="text-align: center; margin-left: 20%;">FeedMe</a>
+            <form class="d-flex">
+                <div>
+                    know what you want?
+                </div>
+                <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"><i>GO!</i></button>
+            </form>
+        </div>
+    </nav>
+    <!-- navbar end-->
 
 
-        <!--container for restaurants-->
-        <main class="container-lg">
-            <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-1-1">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-1-2">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-1-3">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-2-1">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-2-2">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-2-3">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
+    <!--container for restaurants-->
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-1-1">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-3-1">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-3-2">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-3-3">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-1-2">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-4-1">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-4-2">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="card" style="width: 20rem;" id="result-4-3">
-                        <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Restaurant Name</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
-                          <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="card-link">Home Page</a>
-                          <a href="#" class="card-link">Directions</a>
-                        </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-1-3">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-2-1">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-2-2">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-2-3">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-3-1">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-3-2">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-3-3">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-4-1">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-4-2">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 20rem;" id="result-4-3">
+                    <img src="https://placehold.it/100x100" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Restaurant Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Rating</h6>
+                        <p class="card-text">- Top review or description - <br>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="card-link">Home Page</a>
+                        <a href="#" class="card-link">Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="java.js"></script>
-    </body>
-
-    </html>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
@@ -221,3 +200,4 @@
 </body>
 
 </html>
+
