@@ -4,6 +4,29 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Lobster', cursive;
+    background-attachment: fixed;
+}
+
+nav {
+    background-image: url("navbar.jpg");
+    
+}
+
+.navbar-brand {
+    font-size:40px; 
+    font-style:bold;
+    text-align: center; 
+    margin-left: 20%;
+    color: transparent;
+
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+          background-clip: text;
+}
+
+.formQ {
+    text-align: center; margin-right: 5px
 }
 
 .start {
@@ -12,10 +35,11 @@ body {
     margin: 30px;
     margin-top: 10%;
     border-radius: 10px;
-    background-color: rgba(247, 80, 80, 0.849);
+    background-color: rgba(253, 114, 114, 0.849);
     color: rgb(224, 224, 224);
     font-family: 'Montserrat', sans-serif;
 }
+
 
 .starterTag {
     margin: 10px 0 20px 0;
