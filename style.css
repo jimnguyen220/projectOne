@@ -1,9 +1,21 @@
+body {
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+
 .start {
     border: 1px black solid;
     padding: 10px;
     margin: 30px;
-    margin-top: 25%;
+    margin-top: 10%;
     border-radius: 10px;
+    background-color: rgb(247, 80, 80);
+    color: rgb(224, 224, 224);
+    
 }
 
 .starterTag {
@@ -12,6 +24,10 @@
 
 button {
     margin: 4px;
+}
+
+button:hover {
+    background-color: rgb(168, 168, 255);
 }
 
 .buttonsDiv {
