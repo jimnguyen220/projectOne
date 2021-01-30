@@ -26,28 +26,27 @@ $('#submit-btn').on('click', function(event){
 
     // Zip code entered and submit button pressed
         // Loop through all zip codes and get the restaurants in that zip code
-    var zipcodeText = $(this).siblings(".zipCodeForm").val();
-    console.log(zipcodeText);
+    var citystateVal = $(this).siblings(".zipCodeForm").val();
+    console.log(citystateVal);
 
     $.ajax({
-        url: "https://developers.zomato.com/api/v2.1/cities?q=Madison, WI",
+        url: "https://developers.zomato.com/api/v2.1/cities?q=" + citystateVal,
         headers: { 'user-key': '7f4fa469b70c80542b1210267c2e78aa' }
-    }).then(function (search) {
+    }).then(function (cities) {
 
-            var searchVar = search.location_suggestions[0].id;
-            // var zipCode = search.restaurants[0].restaurant.location.zipcode;
-            console.log(searchVar);
-            // console.log(zipCode);
+            var citiesID = cities.location_suggestions[0].id;
+            console.log(citiesID);
         
 
         $.ajax({
-            url: "https://developers.zomato.com/api/v2.1/search?entity_id=" + searchVar + "&entity_type=city",
+            url: "https://developers.zomato.com/api/v2.1/search?entity_id=" + citiesID + "&entity_type=city",
             headers: { 'user-key': '59d32d7639d297f576ffc1c3d64a97f4' }
-        }).then(function (results) {
-            console.log(results);
-        })
+        }).then(function (search) {
+            console.log(search);
+            
+        }) // Search Ajax Call
 
-    }); // Search Ajax Call
+    }); // Cities Ajax Call
 
    
 
