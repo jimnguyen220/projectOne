@@ -13,8 +13,35 @@ var resultTwelve = $('#result-4-3');
 
 
 //opens restaurants page - rename element on index.html for submit-btn
-$('#submit-btn').on('click', function(){
+$('#submit-btn').on('click', function(event){
+    event.preventDefault();
 
     // local storage
-    window.open("restaurants.html");
-});
+    // window.open("restaurants.html");
+
+
+    // Zip code entered and submit button pressed
+        // Loop through all zip codes and get the restaurants in that zip code
+    var zipcodeText = $(this).siblings(".zipCodeForm").val();
+    console.log(zipcodeText);
+
+    $.ajax({
+        url: "https://developers.zomato.com/api/v2.1/search?",
+        headers: { 'user-key': '7f4fa469b70c80542b1210267c2e78aa' }
+    }).then(function (search) {
+
+            // var zipCode = search.restaurants[0].restaurant.location.zipcode;
+            console.log(search);
+            // console.log(zipCode);
+        
+
+        // $.ajax({
+        //     url: "https://developers.zomato.com/api/v2.1/search?q=" + zipcodeText,
+        //     headers: { 'user-key': '59d32d7639d297f576ffc1c3d64a97f4' } 
+        // })
+
+    }); // Search Ajax Call
+
+   
+
+}); // Click Function
