@@ -12,11 +12,15 @@ var resultEleven = $('#result-4-2');
 var resultTwelve = $('#result-4-3');
 
 
+
 //opens restaurants page - rename element on index.html for submit-btn
 $('#submit-btn').on('click', function(event){
     event.preventDefault();
-
-    // local storage
+    var userInput = {
+        zipcodeInput: $('#zipcode-input').val(),
+    }
+    localStorage.setItem("userInput", JSON.stringify(userInput));
+    
     // window.open("restaurants.html");
 
 
