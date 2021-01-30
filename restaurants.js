@@ -10,3 +10,13 @@ var resultNine = $('#result-3-3');
 var resultTen = $('#result-4-1');
 var resultEleven = $('#result-4-2');
 var resultTwelve = $('#result-4-3');
+
+var userChoice = JSON.parse(localStorage.getItem("userInput"));
+
+
+function renderPage() {
+console.log(userChoice);
+
+};
+
+renderPage();
