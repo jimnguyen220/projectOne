@@ -12,5 +12,9 @@ var resultEleven = $('#result-4-2');
 var resultTwelve = $('#result-4-3');
 
 
-//opens restaurants page
-window.open("resaurants.html");
+//opens restaurants page - rename element on index.html for submit-btn
+$('#submit-btn').on('click', function(){
+
+    // local storage
+    window.open("restaurants.html");
+});
