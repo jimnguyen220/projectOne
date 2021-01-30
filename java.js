@@ -12,11 +12,15 @@ var resultEleven = $('#result-4-2');
 var resultTwelve = $('#result-4-3');
 
 
+
 //opens restaurants page - rename element on index.html for submit-btn
 $('#submit-btn').on('click', function(event){
     event.preventDefault();
-
-    // local storage
+    var userInput = {
+        zipcodeInput: $('#zipcode-input').val(),
+    }
+    localStorage.setItem("userInput", JSON.stringify(userInput));
+    
     // window.open("restaurants.html");
 
 
@@ -38,7 +42,7 @@ $('#submit-btn').on('click', function(event){
 
         $.ajax({
             url: "https://developers.zomato.com/api/v2.1/search?entity_id=" + searchVar + "&entity_type=city",
-            headers: { 'user-key': '59d32d7639d297f576ffc1c3d64a97f4' } 
+            headers: { 'user-key': '59d32d7639d297f576ffc1c3d64a97f4' }
         }).then(function (results) {
             console.log(results);
         })
