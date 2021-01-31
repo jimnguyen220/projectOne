@@ -98,9 +98,9 @@ function loadRestaurantInfo() {
 
             for (var i = 0; i < search.restaurants.length; i++) {
 
-                if (i>3){
-                    break;
-                }
+                // if (i===3){
+                //     break;
+                // }
 
                 // Restaurant Image
                 // Restaurant Name
@@ -116,8 +116,46 @@ function loadRestaurantInfo() {
                 console.log(restaurantURL);
                 console.log(restaurantDirections);
 
-                $(".card-title").append(restaurantName);
-            }
+                var columnDiv = $("<div>");
+                    $(columnDiv).attr("class", "col-sm-12 col-md-4 col-lg-4");
+                var cardDiv = $("<div>");
+                    $(cardDiv).attr("class", "card start");
+                    $(cardDiv).css("width: 20rem");
+                var imgEl = $("<img>");
+                    $(imgEl).attr("class", "card-img-top" + [i]);
+                    $(imgEl).attr("src","https://placehold.it/100x100");
+                var cardbodyDiv = $("<div>");
+                    $(cardbodyDiv).attr("class", "card-body");
+                var cardtitle = $("<h5>");
+                    $(cardtitle).attr("class", "card-title" + [i]);
+                var cardsubtitle = $("<h6>");
+                    $(cardsubtitle).attr("class", "card-subtitle mb-2 text-muted" + [i]);
+                var pEl = $("<p>");
+                    $(pEl).attr("class", "card-text" + [i]);
+                var homeLink = $("<a>");
+                    $(homeLink).attr("id", "home-link" + [i]);
+                    $(homeLink).attr("href", restaurantURL);
+                var directionLink = $("<a>");
+                    $(directionLink).attr("id", "directions-link" + [i]);
+                    $(directionLink).attr("href", restaurantDirections);
+
+                $("#rowFive").append(columnDiv);
+                $(columnDiv).append(cardDiv);
+                $(cardDiv).append(imgEl);
+                $(cardDiv).append(cardbodyDiv);
+                $(cardbodyDiv).append(cardtitle);
+                $(cardbodyDiv).append(cardsubtitle);
+                $(cardbodyDiv).append(pEl);
+                $(cardbodyDiv).append(homeLink);
+                $(cardbodyDiv).append(directionLink);
+
+
+
+                $(".card-title" + [i]).append(restaurantName);
+                $("#home-link" + [i]).append(homeLink).text(restaurantURL);
+                $("#directions-link" + [i]).append(directionLink).text(restaurantDirections);
+
+            } // For Loop
             
 
 
