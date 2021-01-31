@@ -109,6 +109,9 @@ function loadRestaurantInfo() {
                 var restaurantRating = search.restaurants[i].restaurant.user_rating.aggregate_rating;
                 var stringRating = $(restaurantRating).toString();
                 // Restaurant Description
+                var restaurantNumber = search.restaurants[i].restaurant.phone_numbers;
+                var restaurantSchedule = search.restaurants[i].restaurant.timings;
+                var restaurantCuisines = search.restaurants[i].restaurant.cuisines;
                 // Restaurant Home Page
                 var restaurantURL = search.restaurants[i].restaurant.url;
                 // Restaurant Directions            
@@ -118,6 +121,10 @@ function loadRestaurantInfo() {
                 console.log(restaurantRating);
                 console.log(restaurantURL);
                 console.log(restaurantDirections);
+                console.log(restaurantNumber);
+                console.log(restaurantSchedule);
+                console.log(restaurantCuisines);
+
 
                 var columnDiv = $("<div>");
                     $(columnDiv).attr("class", "col-sm-12 col-md-4 col-lg-4");
@@ -157,7 +164,8 @@ function loadRestaurantInfo() {
                 $(".card-title" + [i]).append(restaurantName);
                 $("#home-link" + [i]).append(homeLink).text(restaurantName);
                 $("#directions-link" + [i]).append(directionLink).text(restaurantDirections);
-                $(".card-subtitle mb-2 text-muted" + [i]).append(restaurantRating).text(stringRating);
+                $(".card-subtitle mb-2 text-muted" + [i]).text(stringRating); //NO SHOW
+                $(".card-text" + [i]).text("Phone Number: " + restaurantNumber + " Schedule: " + restaurantSchedule + " Cuisines: " + restaurantCuisines);
 
             } // For Loop
             
@@ -165,4 +173,4 @@ function loadRestaurantInfo() {
 
         }) // Search Ajax Call
     }); // Cities Ajax Call
-} // Onload Function
+} // Onload Functiong
