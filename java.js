@@ -98,10 +98,6 @@ function loadRestaurantInfo() {
 
             for (var i = 0; i < search.restaurants.length; i++) {
 
-                // if (i===3){
-                //     break;
-                // }
-
                 // Restaurant Image
                 // Restaurant Name
                 var restaurantName = search.restaurants[i].restaurant.name;
@@ -139,7 +135,7 @@ function loadRestaurantInfo() {
                     $(directionLink).attr("id", "directions-link" + [i]);
                     $(directionLink).attr("href", restaurantDirections);
 
-                $("#rowFive").append(columnDiv);
+                $("#row").append(columnDiv);
                 $(columnDiv).append(cardDiv);
                 $(cardDiv).append(imgEl);
                 $(cardDiv).append(cardbodyDiv);
