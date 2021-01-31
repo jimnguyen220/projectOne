@@ -20,8 +20,9 @@ $('#submit-btn').on('click', function(event){
         zipcodeInput: $('#zipcode-input').val(),
     }
     localStorage.setItem("userInput", JSON.stringify(userInput));
-    
-    window.open("restaurants.html");
+    //updated this to open page in same window instead of a different tab
+    window.location.href="restaurants.html";
+
 
 
     // Ajax call to get restaurants in city
