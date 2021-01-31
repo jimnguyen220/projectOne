@@ -62,12 +62,11 @@ $('#submit-btn').on('click', function(event){
                 console.log(restaurantName);
                 console.log(restaurantURL);
                 console.log(restaurantDirections);
-            };
+            }
             
 
 
         }) // Search Ajax Call
-
     }); // Cities Ajax Call
 
    
