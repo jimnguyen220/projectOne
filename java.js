@@ -98,10 +98,16 @@ function loadRestaurantInfo() {
 
             for (var i = 0; i < search.restaurants.length; i++) {
 
+                if (i===3){
+                    break;
+                }
+
                 // Restaurant Image
                 // Restaurant Name
                 var restaurantName = search.restaurants[i].restaurant.name;
                 // Restaurant Rating
+                var restaurantRating = search.restaurants[i].restaurant.user_rating.aggregate_rating;
+                var stringRating = $(restaurantRating).toString();
                 // Restaurant Description
                 // Restaurant Home Page
                 var restaurantURL = search.restaurants[i].restaurant.url;
@@ -109,6 +115,7 @@ function loadRestaurantInfo() {
                 var restaurantDirections = search.restaurants[i].restaurant.location.address;
 
                 console.log(restaurantName);
+                console.log(restaurantRating);
                 console.log(restaurantURL);
                 console.log(restaurantDirections);
 
@@ -148,8 +155,9 @@ function loadRestaurantInfo() {
 
 
                 $(".card-title" + [i]).append(restaurantName);
-                $("#home-link" + [i]).append(homeLink).text(restaurantURL);
+                $("#home-link" + [i]).append(homeLink).text(restaurantName);
                 $("#directions-link" + [i]).append(directionLink).text(restaurantDirections);
+                $(".card-subtitle mb-2 text-muted" + [i]).append(restaurantRating).text(stringRating);
 
             } // For Loop
             
