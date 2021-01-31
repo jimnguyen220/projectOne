@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="maps.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap" rel="stylesheet">
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbFGfo8BfNfYXMEVjrr0uZSWRSNLeG4eY&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbFGfo8BfNfYXMEVjrr0uZSWRSNLeG4eY&callback=initMap&libraries=&v=weekly"
+        defer></script>
     <title>Directions</title>
 </head>
+
 <body>
     <!-- navbar begins-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid navbar-container">
-            <a href="restaurants.html"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="black"
-                    class="bi bi-shop-window" viewBox="0 0 16 16">
+            <a href="index.html" class="restaurantsButton"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="white"
+                class="bi bi-house-door" viewBox="0 0 16 16">
+                <path
+                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+            </svg><br>
+            <div>Home</div>
+        </a>
+            <a href="restaurants.html" class="restaurantsButton mapsButton"><svg xmlns="http://www.w3.org/2000/svg" width="38"
+                    height="38" fill="white" class="bi bi-shop-window" viewBox="0 0 16 16">
                     <path
                         d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z" />
-                </svg></a>
-            <a class="navbar-brand" href="index.html">FeedMe</a>
+                </svg><br>
+                <div>Restaurants</div>
+            </a>
+
+
+            <div id="insetBgd">
+                <h5 class="titleText" href="index.html">Feed.Me</h5>
+            </div>
             <form class="d-flex">
-                <div class="formQ">Do know what you want?</div>
-                <input class="form-control me-2" type="search" placeholder="Search here" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><i>GO!</i></button>
+                <div class="formQ">Do you know what you want?</div>
+                <input class="form-control me-3" type="search" placeholder="Search the restaurant here..."
+                    aria-label="Search">
+                <button class="btn btn-outline-success go-btn" type="submit"><i>GO!</i></button>
             </form>
         </div>
     </nav>
@@ -39,24 +54,27 @@
     <main class="container">
         <div class="row">
             <div class="col-2"></div>
-            <div class="col-8">
-                <header id="restaurant-name"><h1>Restaurant</h1></header>
+            <div class="col-8 map">
+                <header id="restaurant-name">
+                    <h1>Restaurant</h1>
+                </header>
 
-            <div id="map">
-               
-            </div>
-            <button id="get-location">Current Coordinates</button>
+                <div id="map">
+
+                </div>
+                <button id="get-location">Current Coordinates</button>
             </div>
             <div class="col-2"></div>
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="java.js"></script>
     <script src="maps.js"></script>
 </body>
+
 </html>
