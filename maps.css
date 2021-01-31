@@ -9,3 +9,7 @@
     margin-right: auto;
     width: 50%;
 }
+
+#map {
+    height: 500px;
+  }
