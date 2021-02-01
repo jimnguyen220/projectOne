@@ -16,13 +16,17 @@ function getLocation() {
 }
 
 var coordinates = {};
+var mapLat;
+var mapLng;
+var myLatlng;
 
 function showPosition(position) {
   console.log("Latitude: " + position.coords.latitude);
   console.log("Longitude: " + position.coords.longitude);
 
   mapLat =  position.coords.latitude;
-  mapLng =  position.coords.longitude
+  mapLng =  position.coords.longitude;
+  myLatlng = new google.maps.LatLng(mapLat,mapLng);
 
   coordinates = {
     lat: position.coords.latitude,
@@ -40,27 +44,47 @@ function getMap() {
   console.log(mapLat)
 
   var mapOptions = {
-    zoom: 14,
-    center: {lat: 44.9288, lng: -93.103}
+    zoom: 12,
+    center: myLatlng
+    // 'center: coordinates' also works - can use coordinates as an object or 'new google.maps.LatLng(43.084, -93.986)'
   }
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  var marker = new google.maps.Marker ({
+    position: myLatlng,
+    map: map
+  })
+  calcRoute();
 }
 
-// function getDirections(origin, destination) {
-//   var directionsService = new google.maps.DirectionsService();
-//   var direcstionsDisplay = new google.maps.DirectionsRender();
-//   request = {
-//     origin: origin,
-//     destination: destination,
-//     travelMode: 'DRIVING'
+// function showMap() {
+
+//   var directionsRenderer = new google.maps.DirectionsRenderer();
+//   var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+//   var mapOptions = {
+//     zoom:7,
+//     center: chicago
 //   }
-//   direcstionsDisplay.setMap(map);
-//   directionsService.route(request, (result, status) {
-//     if (status == "ok") {
-//       directionsDisplay.setDirections(result);
-//     }
-//   })
+//   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+//   directionsRenderer.setMap(map);
 // }
+
+function calcRoute() {
+  var directionsService = new google.maps.DirectionsService();
+  var directionsRenderer = new google.maps.DirectionsRenderer();
+  directionsRenderer.setMap(map);
+  var request = {
+    origin: coordinates,
+    destination: {lat: 44.978200, lng: -93.274120},
+    travelMode: 'DRIVING'
+  };
+
+  directionsService.route(request, function(result, status) {
+    if (status == 'OK') {
+      directionsRenderer.setDirections(result);
+    }
+  });
+}
 
 $('#get-location').on('click', getLocation);
 
