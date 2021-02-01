@@ -37,9 +37,11 @@ function showPosition(position) {
 }
 
 function getMap() {
+  console.log(mapLat)
+
   var mapOptions = {
     zoom: 14,
-    center: new google.maps.Map(mapLat, mapLng)
+    center: {lat: 44.9288, lng: -93.103}
   }
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
