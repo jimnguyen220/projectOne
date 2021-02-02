@@ -137,3 +137,6 @@ function loadRestaurantInfo() {
         }) // Search Ajax Call
     }); // Cities Ajax Call
 } // Onload Function
+
+// Click Function for GO!
+$("")
