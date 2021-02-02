@@ -2,10 +2,10 @@ var coordinates = {};
 var restaurant = JSON.parse(localStorage.getItem("restaurantCoords"));
 
 var restaurantCoords = {
-  lat: parseInt(restaurant.lat),
-  lng: parseInt(restaurant.lng)
+  lat: parseFloat(restaurant.lat),
+  lng: parseFloat(restaurant.lng)
 };
-
+//used paseFloat() to keep the decimal points - if  there is already something in local storage, it adds them
 
 function initMap() {
   
