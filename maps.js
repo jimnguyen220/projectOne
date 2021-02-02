@@ -1,6 +1,9 @@
+var coordinates = {};
+
 function initMap() {
   
   var location = { lat: 44.977, lng: -93.264 };
+  //pull this from local storage for restaurant location
   var map = new google.maps.Map(document.getElementById("map"), {
     center: location,
     zoom: 13,
@@ -18,14 +21,11 @@ function getLocation() {
     alert("Geolocation is not supported by this browser.");
   }
 }
-var coordinates = {};
 
 
 function showPosition(position) {
   console.log("Latitude: " + position.coords.latitude);
   console.log("Longitude: " + position.coords.longitude);
-
-  // myLatlng = new google.maps.LatLng(mapLat,mapLng);
 
   coordinates = {
     lat: position.coords.latitude,
@@ -34,8 +34,7 @@ function showPosition(position) {
 
   getMap();
 
-  // localStorage.setItem("coordinates", JSON.stringify(coordinates));
- 
+
 }
 
 function getMap() {
@@ -47,18 +46,15 @@ function getMap() {
   }
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  // var marker = new google.maps.Marker ({
-  //   position: myLatlng,
-  //   map: map
-  // })
   calcRoute();
 }
 
 
 function calcRoute() {
+  $('.col-3').addClass('directions');
   var directionsService = new google.maps.DirectionsService();
   var directionsRenderer = new google.maps.DirectionsRenderer();
-  directionsRenderer.setMap(map);
+
   var request = {
     origin: coordinates,
     destination: {lat: 44.978200, lng: -93.274120},
@@ -66,6 +62,8 @@ function calcRoute() {
     travelMode: 'DRIVING'
   };
 
+  directionsRenderer.setMap(map);
+  directionsRenderer.setPanel(document.getElementById("right-panel"));
   directionsService.route(request, function(result, status) {
     if (status == 'OK') {
       directionsRenderer.setDirections(result);
