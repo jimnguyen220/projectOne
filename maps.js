@@ -5,7 +5,7 @@ var restaurantCoords = {
   lat: parseFloat(restaurant.lat),
   lng: parseFloat(restaurant.lng)
 };
-//used paseFloat() to keep the decimal points - if  there is already something in local storage, it adds them
+//used paseFloat() to keep the decimal points 
 
 function initMap() {
   

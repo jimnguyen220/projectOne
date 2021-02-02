@@ -78,6 +78,7 @@ function loadRestaurantInfo() {
                 console.log(restaurantCuisines);
 
 
+
                 var columnDiv = $("<div>");
                     $(columnDiv).attr("class", "col-sm-12 col-md-4 col-lg-4");
                 var cardDiv = $("<div>");
@@ -95,11 +96,12 @@ function loadRestaurantInfo() {
                 var homeLink = $("<a>");
                     $(homeLink).attr("id", "home-link" + [i]);
                     $(homeLink).attr("href", restaurantURL);
-                    var directionLink = $("<a>");
+                var directionLink = $("<a>");
                     $(directionLink).attr("id", "directions-link" + [i]);
                     // $(directionLink).attr("href", restaurantDirections);
                     $(directionLink).attr("data-lat", + restaurantLat);
                     $(directionLink).attr("data-lon", + restaurantLon);
+                    $(directionLink).attr("data-name", + restaurantName);
                     $(directionLink).attr("class", "map-link")
                     //removed href link and created class for event listener
                 var menuLink = $("<a>");
@@ -176,7 +178,10 @@ $(document).on('click', '.map-link', function() {
         lng: $(this).attr("data-lon")
     };
     
+    var restaurantName = $(this).attr("data-name");
+
     localStorage.setItem("restaurantCoords", JSON.stringify(restaurantCoords));
+    localStorage.setItem("restaurantName", restaurantName);
 
     window.location.href="maps.html";
 });
