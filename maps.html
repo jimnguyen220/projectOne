@@ -11,9 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&display=swap" rel="stylesheet">
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbFGfo8BfNfYXMEVjrr0uZSWRSNLeG4eY&callback=initMap&libraries=&v=weekly"
-        defer></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbFGfo8BfNfYXMEVjrr0uZSWRSNLeG4eY&callback=initMap"></script>
     <title>Directions</title>
 </head>
 
@@ -49,20 +47,19 @@
         </div>
     </nav>
     <!-- navbar ends -->
-    <!-- add element in navbar to go to maps page and display last result from local storage? -->
+
 
     <main class="container">
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8 map">
                 <header id="restaurant-name">
-                    <h1>Restaurant</h1>
+                    <h1>Restaurant</h1> 
+                    <!-- pull restaurant name from directions link that is clicked -->
                 </header>
 
-                <div id="map">
-
-                </div>
-                <button id="get-location">Current Coordinates</button>
+                <div id="map"></div>
+                <button id="get-location">Take me there!</button>
             </div>
             <div class="col-2"></div>
         </div>
