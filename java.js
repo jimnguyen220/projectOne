@@ -11,20 +11,6 @@ var resultTen = $('#result-4-1');
 var resultEleven = $('#result-4-2');
 var resultTwelve = $('#result-4-3');
 
-
-
-//opens restaurants page - rename element on index.html for submit-btn
-$('#submit-btn').on('click', function(event){
-    event.preventDefault();
-    
-    // Local storing city and state
-    var userInput = $("#city-state").val();
-    localStorage.setItem("userInput", JSON.stringify(userInput));
-    //updated this to open page in same window instead of a different tab
-    window.location.href="restaurants.html";
-
-}); // Click Function
-
 // Onload Function
 function loadRestaurantInfo() {
 
@@ -78,7 +64,6 @@ function loadRestaurantInfo() {
                 console.log(restaurantSchedule);
                 console.log(restaurantCuisines);
 
-
                 var columnDiv = $("<div>");
                     $(columnDiv).attr("class", "col-sm-12 col-md-4 col-lg-4");
                 var cardDiv = $("<div>");
@@ -126,6 +111,37 @@ function loadRestaurantInfo() {
             
 
 
-        }) // Search Ajax Call
+        }); // Search Ajax Call
     }); // Cities Ajax Call
 } // Onload Function
+
+function verify(input) {
+
+    if (input == "") {
+        $("#blankInput").append("Please put in a city and state!");
+        document.getElementById('city-state').style.backgroundColor = "#e37685";
+        return false;
+    }
+    else {
+        zipCodeForm.style.diplay = "none"
+        starterTag.style.display = "inline"
+    }
+    
+}
+
+//opens restaurants page - rename element on index.html for submit-btn
+$('#submit-btn').on('click', function(event){
+    event.preventDefault();
+    
+    // Local storing city and state
+    var userInput = $("#city-state").val().trim();
+    //if user input is blank or if ajax call returns undefined
+    if (verify(userInput) == false){
+        return;
+    }
+    
+    localStorage.setItem("userInput", JSON.stringify(userInput));
+    //updated this to open page in same window instead of a different tab
+    window.location.href="restaurants.html";
+
+}); // Click Function
