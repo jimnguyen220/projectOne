@@ -101,7 +101,7 @@ function loadRestaurantInfo() {
                     $(directionLink).attr("href", restaurantDirections);
                 var menuLink = $("<a>");
                     $(menuLink).attr("id", "menu-link" + [i]);
-                    $(menuLink).attr("href","restaurantMenu");
+                    $(menuLink).attr("href",restaurantMenu);
 
                 $("#row").append(columnDiv);
                 $(columnDiv).append(cardDiv);
