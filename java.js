@@ -122,8 +122,16 @@ function loadRestaurantInfo() {
                 $("#menu-link" + [i]).append(menuLink).html("<br> Menu");
                 $(".card-text" + [i]).html("Phone Number: " + restaurantNumber + " <br> Schedule: " + restaurantSchedule + " <br> Cuisines: " + restaurantCuisines + "<br> Cost for Two: " + restaurantCost);
 
+
+                var restaurantLat = search.restaurants[i].restaurant.location.latitude;
+                var restaurantLon = search.restaurants[i].restaurant.location.longitude;
+
+                localStorage.setItem("restaurantLat" + [i], restaurantLat);
+                localStorage.setItem("restaurantLon" + [i], restaurantLon);
+
             } // For Loop
             
+
 
 
         }) // Search Ajax Call
