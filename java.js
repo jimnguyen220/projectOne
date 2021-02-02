@@ -53,16 +53,18 @@ function loadRestaurantInfo() {
                     break;
                 }
 
-                // Restaurant Image
+                // Restaurant Cost for Two
+                var restaurantCost = search.restaurants[i].restaurant.average_cost_for_two;
                 // Restaurant Name
                 var restaurantName = search.restaurants[i].restaurant.name;
                 // Restaurant Rating
-                var restaurantRating = search.restaurants[i].restaurant.user_rating.aggregate_rating;
-                var stringRating = $(restaurantRating).toString();
+                var restaurantRating = search.restaurants[i].restaurant.user_rating.rating_text;
                 // Restaurant Description
                 var restaurantNumber = search.restaurants[i].restaurant.phone_numbers;
                 var restaurantSchedule = search.restaurants[i].restaurant.timings;
                 var restaurantCuisines = search.restaurants[i].restaurant.cuisines;
+                //Restaurant Menu
+                var restaurantMenu = search.restaurants[i].restaurant.menu_url;
                 // Restaurant Home Page
                 var restaurantURL = search.restaurants[i].restaurant.url;
                 // Restaurant Directions            
@@ -82,9 +84,7 @@ function loadRestaurantInfo() {
                 var cardDiv = $("<div>");
                     $(cardDiv).attr("class", "card start");
                     $(cardDiv).css("width: 20rem");
-                var imgEl = $("<img>");
-                    $(imgEl).attr("class", "card-img-top" + [i]);
-                    $(imgEl).attr("src","https://placehold.it/100x100");
+                
                 var cardbodyDiv = $("<div>");
                     $(cardbodyDiv).attr("class", "card-body");
                 var cardtitle = $("<h5>");
@@ -99,24 +99,28 @@ function loadRestaurantInfo() {
                 var directionLink = $("<a>");
                     $(directionLink).attr("id", "directions-link" + [i]);
                     $(directionLink).attr("href", restaurantDirections);
+                var menuLink = $("<a>");
+                    $(menuLink).attr("id", "menu-link" + [i]);
+                    $(menuLink).attr("href","restaurantMenu");
 
                 $("#row").append(columnDiv);
                 $(columnDiv).append(cardDiv);
-                $(cardDiv).append(imgEl);
                 $(cardDiv).append(cardbodyDiv);
                 $(cardbodyDiv).append(cardtitle);
                 $(cardbodyDiv).append(cardsubtitle);
                 $(cardbodyDiv).append(pEl);
                 $(cardbodyDiv).append(homeLink);
                 $(cardbodyDiv).append(directionLink);
+                $(cardbodyDiv).append(menuLink);
 
 
 
                 $(".card-title" + [i]).append(restaurantName);
+                // $(".card-subtitle mb-2 text-muted" + [i]).append(stringRating); //NO SHOW
                 $("#home-link" + [i]).append(homeLink).text(restaurantName);
-                $("#directions-link" + [i]).append(directionLink).text(restaurantDirections);
-                $(".card-subtitle mb-2 text-muted" + [i]).text(stringRating); //NO SHOW
-                $(".card-text" + [i]).text("Phone Number: " + restaurantNumber + " Schedule: " + restaurantSchedule + " Cuisines: " + restaurantCuisines);
+                $("#directions-link" + [i]).append(directionLink).html("<br>" + restaurantDirections);
+                $("#menu-link" + [i]).append(menuLink).html("<br> Menu");
+                $(".card-text" + [i]).html("Phone Number: " + restaurantNumber + " <br> Schedule: " + restaurantSchedule + " <br> Cuisines: " + restaurantCuisines + "<br> Cost for Two: " + restaurantCost);
 
             } // For Loop
             
@@ -124,4 +128,4 @@ function loadRestaurantInfo() {
 
         }) // Search Ajax Call
     }); // Cities Ajax Call
-} // Onload Functiong
+} // Onload Function
