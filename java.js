@@ -69,6 +69,10 @@ function loadRestaurantInfo() {
                 var restaurantURL = search.restaurants[i].restaurant.url;
                 // Restaurant Directions            
                 var restaurantDirections = search.restaurants[i].restaurant.location.address;
+                // Restaurant Latitude
+                var restaurantLat = search.restaurants[i].restaurant.location.latitude;
+                // Restaurant Longitude
+                var restaurantLon = search.restaurants[i].restaurant.location.longitude;
 
                 console.log(restaurantName);
                 console.log(restaurantRating);
@@ -98,7 +102,10 @@ function loadRestaurantInfo() {
                     $(homeLink).attr("href", restaurantURL);
                 var directionLink = $("<a>");
                     $(directionLink).attr("id", "directions-link" + [i]);
-                    $(directionLink).attr("href", restaurantDirections);
+                    // $(directionLink).attr("href", restaurantDirections);
+                    $(directionLink).attr("data-lat", + restaurantLat);
+                    $(directionLink).attr("data-lon", + restaurantLon);
+                    $(directionLink).attr("class", "map-link")
                 var menuLink = $("<a>");
                     $(menuLink).attr("id", "menu-link" + [i]);
                     $(menuLink).attr("href",restaurantMenu);
@@ -123,11 +130,9 @@ function loadRestaurantInfo() {
                 $(".card-text" + [i]).html("Phone Number: " + restaurantNumber + " <br> Schedule: " + restaurantSchedule + " <br> Cuisines: " + restaurantCuisines + "<br> Cost for Two: " + restaurantCost);
 
 
-                var restaurantLat = search.restaurants[i].restaurant.location.latitude;
-                var restaurantLon = search.restaurants[i].restaurant.location.longitude;
 
-                localStorage.setItem("restaurantLat" + [i], restaurantLat);
-                localStorage.setItem("restaurantLon" + [i], restaurantLon);
+                // localStorage.setItem("restaurantLat" + [i], restaurantLat);
+                // localStorage.setItem("restaurantLon" + [i], restaurantLon);
 
             } // For Loop
             
@@ -137,3 +142,57 @@ function loadRestaurantInfo() {
         }) // Search Ajax Call
     }); // Cities Ajax Call
 } // Onload Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).on('click', '.map-link', function() {
+
+    var restaurantCoords = {
+        lat: $(this).attr("data-lat"),
+        lng: $(this).attr("data-lon")
+    };
+    
+    localStorage.setItem("restaurantCoords", JSON.stringify(restaurantCoords));
+
+    window.location.href="maps.html";
+});

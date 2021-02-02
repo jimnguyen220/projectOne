@@ -1,8 +1,15 @@
 var coordinates = {};
+var restaurant = JSON.parse(localStorage.getItem("restaurantCoords"));
+
+var restaurantCoords = {
+  lat: parseInt(restaurant.lat),
+  lng: parseInt(restaurant.lng)
+};
+
 
 function initMap() {
   
-  var location = { lat: 44.977, lng: -93.264 };
+  var location = restaurantCoords;
   //pull this from local storage for restaurant location
   var map = new google.maps.Map(document.getElementById("map"), {
     center: location,
@@ -34,7 +41,6 @@ function showPosition(position) {
 
   getMap();
 
-
 }
 
 function getMap() {
@@ -57,7 +63,7 @@ function calcRoute() {
 
   var request = {
     origin: coordinates,
-    destination: {lat: 44.978200, lng: -93.274120},
+    destination: restaurantCoords,
     //change hard code to coordinates from local storage from zomato API
     travelMode: 'DRIVING'
   };
@@ -71,5 +77,8 @@ function calcRoute() {
   });
 }
 
-$('#get-location').on('click', getLocation);
 
+
+
+
+$('#get-location').on('click', getLocation);

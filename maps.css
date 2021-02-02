@@ -12,6 +12,7 @@
 
 #map {
     height: 500px;
+    text-shadow: none;
   }
 
 .directions {
