@@ -13,3 +13,7 @@
 #map {
     height: 500px;
   }
+
+.directions {
+    background-color: white;
+}

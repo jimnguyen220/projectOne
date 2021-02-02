@@ -51,6 +51,7 @@ function getMap() {
 
 
 function calcRoute() {
+  $('.col-3').addClass('directions');
   var directionsService = new google.maps.DirectionsService();
   var directionsRenderer = new google.maps.DirectionsRenderer();
 
