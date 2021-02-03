@@ -52,3 +52,23 @@ $.ajax({
 };
 
 renderPage();
+
+var directionLink = $("<a>");
+$(directionLink).attr("id", "directions-link" + [i]);
+// $(directionLink).attr("href", restaurantDirections);
+$(directionLink).attr("data-lat", + restaurantLat);
+$(directionLink).attr("data-lon", + restaurantLon);
+$(directionLink).attr("class", "map-link")
+
+
+$(document).on('click', '.map-link', function() {
+
+    var restaurantCoords = {
+        lat: $(this).attr("data-lat"),
+        lng: $(this).attr("data-lon")
+    };
+    
+    localStorage.setItem("restaurantCoords", JSON.stringify(restaurantCoords));
+
+    window.location.href="maps.html";
+});

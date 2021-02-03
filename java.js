@@ -1,15 +1,3 @@
-var resultOne = $('#result-1-1');
-var resultTwo = $('#result-1-2');
-var resultThree = $('#result-1-3');
-var resultFour = $('#result-2-1');
-var resultFive = $('#result-2-2');
-var resultSix = $('#result-2-3');
-var resultSeven = $('#result-3-1');
-var resultEight = $('#result-3-2');
-var resultNine = $('#result-3-3');
-var resultTen = $('#result-4-1');
-var resultEleven = $('#result-4-2');
-var resultTwelve = $('#result-4-3');
 
 
 
@@ -72,6 +60,10 @@ function loadRestaurantInfo() {
                 var restaurantURL = search.restaurants[i].restaurant.url;
                 // Restaurant Directions            
                 var restaurantDirections = search.restaurants[i].restaurant.location.address;
+                // Restaurant Latitude
+                var restaurantLat = search.restaurants[i].restaurant.location.latitude;
+                // Restaurant Longitude
+                var restaurantLon = search.restaurants[i].restaurant.location.longitude;
 
                 console.log(restaurantName);
                 console.log(restaurantRating);
@@ -80,6 +72,7 @@ function loadRestaurantInfo() {
                 console.log(restaurantNumber);
                 console.log(restaurantSchedule);
                 console.log(restaurantCuisines);
+
 
 
                 var columnDiv = $("<div>");
@@ -101,7 +94,12 @@ function loadRestaurantInfo() {
                     $(homeLink).attr("href", restaurantURL);
                 var directionLink = $("<a>");
                     $(directionLink).attr("id", "directions-link" + [i]);
-                    $(directionLink).attr("href", restaurantDirections);
+                    // $(directionLink).attr("href", restaurantDirections);
+                    $(directionLink).attr("data-lat", + restaurantLat);
+                    $(directionLink).attr("data-lon", + restaurantLon);
+                    $(directionLink).attr("data-name", + restaurantName);
+                    $(directionLink).attr("class", "map-link")
+                    //removed href link and created class for event listener
                 var menuLink = $("<a>");
                     $(menuLink).attr("id", "menu-link" + [i]);
                     $(menuLink).attr("href",restaurantMenu);
@@ -126,11 +124,10 @@ function loadRestaurantInfo() {
                 $(".card-text" + [i]).html("Phone Number: " + restaurantNumber + " <br> Schedule: " + restaurantSchedule + " <br> Cuisines: " + restaurantCuisines + "<br> Cost for Two: " + restaurantCost);
 
 
-                var restaurantLat = search.restaurants[i].restaurant.location.latitude;
-                var restaurantLon = search.restaurants[i].restaurant.location.longitude;
 
-                localStorage.setItem("restaurantLat" + [i], restaurantLat);
-                localStorage.setItem("restaurantLon" + [i], restaurantLon);
+
+                // localStorage.setItem("restaurantLat" + [i], restaurantLat);
+                // localStorage.setItem("restaurantLon" + [i], restaurantLon);
 
             } // For Loop
             
@@ -168,4 +165,19 @@ $("#go-button").click(function () {
     
             }) // Search Ajax Call
         }); // Cities Ajax Call
+})
+
+$(document).on('click', '.map-link', function() {
+
+    var restaurantCoords = {
+        lat: $(this).attr("data-lat"),
+        lng: $(this).attr("data-lon")
+    };
+    
+    var restaurantName = $(this).attr("data-name");
+
+    localStorage.setItem("restaurantCoords", JSON.stringify(restaurantCoords));
+    localStorage.setItem("restaurantName", restaurantName);
+
+    window.location.href="maps.html";
 });
