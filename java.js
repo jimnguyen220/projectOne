@@ -34,6 +34,7 @@ function loadRestaurantInfo() {
 
         var citiesID = cities.location_suggestions[0].id;
         console.log(citiesID);
+        console.log(cities);
         
 
         $.ajax({
@@ -138,34 +139,6 @@ function loadRestaurantInfo() {
     }); // Cities Ajax Call
 } // Onload Function
 
-// Click Function for GO!
-$("#go-button").click(function () {
-
-        // Ajax call to get restaurants in city
-        var citystateVal = localStorage.getItem("userInput");
-        console.log(citystateVal);
-    
-        $.ajax({
-            url: "https://developers.zomato.com/api/v2.1/cities?q=" + citystateVal,
-            headers: { 'user-key': '7f4fa469b70c80542b1210267c2e78aa' }
-        }).done(function (cities) {
-    
-            var citiesID = cities.location_suggestions[0].id;
-            console.log(citiesID);
-            
-    
-            $.ajax({
-                url: "https://developers.zomato.com/api/v2.1/search?entity_id=" + citiesID + "&entity_type=city",
-                headers: { 'user-key': '59d32d7639d297f576ffc1c3d64a97f4' }
-            }).then(function (search) {
-                console.log(search);
-                
-    
-    
-    
-            }) // Search Ajax Call
-        }); // Cities Ajax Call
-})
 
 $(document).on('click', '.map-link', function() {
 
