@@ -140,6 +140,8 @@ function loadRestaurantInfo() {
 } // Onload Function
 
 
+
+//listener for click to get to directions
 $(document).on('click', '.map-link', function() {
 
     var restaurantCoords = {
