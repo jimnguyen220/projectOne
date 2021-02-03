@@ -13,7 +13,7 @@ function initMap() {
   //pull this from local storage for restaurant location
   var map = new google.maps.Map(document.getElementById("map"), {
     center: location,
-    zoom: 13,
+    zoom: 17,
   });
   var marker = new google.maps.Marker ({
     position: location,
@@ -46,7 +46,7 @@ function showPosition(position) {
 function getMap() {
 
   var mapOptions = {
-    zoom: 12,
+    zoom: 15,
     center: coordinates
     // 'coordinates should be entered as object '{lat: 44.978200, lng: -93.274120}' or 'new google.maps.LatLng(44.978200, -93.274120)'
   }
