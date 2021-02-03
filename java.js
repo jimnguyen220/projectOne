@@ -56,10 +56,6 @@ function loadRestaurantInfo() {
 
             for (var i = 0; i < search.restaurants.length; i++) {
 
-                if (i===3){
-                    break;
-                }
-
                 // Restaurant Cost for Two
                 var restaurantCost = search.restaurants[i].restaurant.average_cost_for_two;
                 // Restaurant Name
@@ -172,4 +168,4 @@ $("#go-button").click(function () {
     
             }) // Search Ajax Call
         }); // Cities Ajax Call
-})
+});
