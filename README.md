@@ -16,15 +16,15 @@ Must be interactive (i.e: accept and respond to user input)
 
 The concept of our website was built around a traveler visiting a town for the first time.  They do not know the area well and would like to find a place to eat.  When the page loads, the user will enter the name of the city they would like restarant results for.
 
-![index image](./assets...)
+![index image](./assets/images/index.PNG)
 
 This information gets pushed to the Zomato API and displays the restaurant results in individual cards, listing the name of the restaurant, phone number, hours, types of f ood and average cost for two.  It will also display links on the bottom.  The three links will take you to zomato's information page on the website, directions, and menu.  
 
-![restaurants image](./assets...)
+![restaurants image](./assets/images/restaurants.png)
 
 When you click the link for the address, it loads a page to a map that uses the Google Map Services API.  On initial load, it will show the location of the restaurant.  When you hit the 'Take me there' button, it will route the directions on the map and display turn by turn directions to the right.
 
-![maps image](./assets...)
+![maps image](./assets/images/maps.PNG)
 
 
 

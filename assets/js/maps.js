@@ -8,14 +8,14 @@ var restaurantCoords = {
 //used paseFloat() to keep the decimal points 
 
 function initMap() {
-  
+
   var location = restaurantCoords;
   //pull this from local storage for restaurant location
   var map = new google.maps.Map(document.getElementById("map"), {
     center: location,
     zoom: 17,
   });
-  var marker = new google.maps.Marker ({
+  var marker = new google.maps.Marker({
     position: location,
     map: map
   })
@@ -70,7 +70,7 @@ function calcRoute() {
 
   directionsRenderer.setMap(map);
   directionsRenderer.setPanel(document.getElementById("right-panel"));
-  directionsService.route(request, function(result, status) {
+  directionsService.route(request, function (result, status) {
     if (status == 'OK') {
       directionsRenderer.setDirections(result);
     }

@@ -1,5 +1,5 @@
 body {
-    background-image: url("background.jpg");
+    background-image: url("../images/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,10 +9,10 @@ body {
 
 nav {
     padding: 20px 0px 16px 20px;
-    background-image: url("navbar.jpg");
+    background-image: url("../images/navbar.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-image: url("navbar-border.jpg") 50 stretch;
+    border-image: url("../images/navbar-border.jpg") 50 stretch;
     border-image-repeat: stretch;
     border-bottom: 15px solid transparent;
 }
@@ -50,7 +50,7 @@ nav {
 .optionButtons {
     margin: 4px;
     border-radius: 7px;
-    background-image: url("buttonTexture.jpg");
+    background-image: url("../images/buttonTexture.jpg");
 
 }
 
@@ -101,7 +101,7 @@ nav {
     padding: 40px 35px 40px 30px;
     margin: 30px;
     margin-top: 10%;
-    background-image: url("searchBox.jpg");
+    background-image: url("../images/searchBox.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -113,7 +113,7 @@ nav {
     font-size: 20px;
     padding: 0px 35px 48px 35px;
     margin: 30px;
-    background-image: url("searchBox.jpg");
+    background-image: url("../images/searchBox.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -136,5 +136,5 @@ select {
 }
 
 .card {
-    background-image: url("restaurantCard.jpg");
+    background-image: url("../images/restaurantCard.jpg");
 }
