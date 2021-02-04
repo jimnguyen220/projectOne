@@ -33,7 +33,7 @@ When you click the link for the address, it loads a page to a map that uses the 
 
 ----------------------------------
 
-link to live website: https://github.com/jimnguyen220/projectOneFamilyMatters
+link to live website: https://jimnguyen220.github.io/projectOneFamilyMatters/
 
 link to github repo: https://github.com/jimnguyen220/projectOneFamilyMatters
 
