@@ -14,7 +14,6 @@ function loadRestaurantInfo() {
         var citiesID = cities.location_suggestions[0].id;
         console.log(citiesID);
 
-
         $.ajax({
             url: "https://developers.zomato.com/api/v2.1/search?entity_id=" + citiesID + "&entity_type=city",
             headers: { 'user-key': '59d32d7639d297f576ffc1c3d64a97f4' }
