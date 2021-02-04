@@ -17,10 +17,11 @@ nav {
     border-bottom: 15px solid transparent;
 }
 
+
 .restaurantsButton {
     color: aliceblue;
     margin-top: 8px;
-    
+
     font-size: 18px;
     text-align: center;
     text-shadow: -3px 3px 0px rgb(0, 0, 0);
@@ -127,6 +128,7 @@ select {
 
 .starterTag {
     margin: 10px 0 20px 0;
+    display: none;
 }
 
 .buttonsDiv {

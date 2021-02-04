@@ -42,7 +42,7 @@
             </div>
             <form class="d-flex">
                 <div class="formQ">Do you know what you want?</div>
-                <input class="form-control me-3" type="search" placeholder="Search the restaurant here..."
+                <input class="form-control me-3" id="restarauntSearchGo"type="search" placeholder="Search the restaurant here..."
                     aria-label="Search">
                 <button class="btn btn-outline-success go-btn" type="submit"><i>GO!</i></button>
             </form>
@@ -57,41 +57,44 @@
                 <div class="centerStart" style="text-align: center;">
 
                     <!--City and State form-->
-                    <form action="submit" class="zipCodeForm">
+                    <form action="submit" class="zipCodeForm" id="zipCodeForm" onSubmit="verify();">
                         <p>To start please enter your city and state below.</p>
-                        <input type="text" placeholder="Ex: Minneapolis, MN" id="city-state"></input>
-                        <button id="submit-btn">Submit</button>
+                        <input type="text" placeholder="Ex: Minneapolis, MN" id="city-state" class="inputField"></input>
+                        <button id="submit-btn" class="optionButtons">Submit</button>
+                        <div id="blankInput"></div>
                     </form>
 
                     <!--buttons for choosing the food genre-->
-                    <div class="starterTag">
+                    <div class="starterTag" id="starterTag">
                         OK! Let's get you started!<br>
                         Which of these sound good to you?<br>
-                    </div>
-                    <div class="button2"> OK. How about any of these?</div>
-                    <div class="buttonsDiv">
-                        <button class="optionButtons">Spanish</button>
-                        <button class="optionButtons">Italian</button>
-                        <button class="optionButtons">Chinese</button>
-                        <button class="optionButtons">Indian</button>
-                        <button class="optionButtons">Thai</button>
-                        <button class="optionButtons">Japanese</button>
-                        <button class="optionButtons">Korean</button>
-                        <button class="optionButtons">African</button>
-                        <button class="optionButtons button2">Azerbaijani</button>
-                        <button class="optionButtons button2">French</button>
-                        <button class="optionButtons button2">Middle Eastern</button>
-                        <button class="optionButtons button2">Vietnamese</button>
-                        <button class="optionButtons button2">Mediterranean</button>
-                        <button class="optionButtons button2">Cantonese</button>
-                        <button class="optionButtons button2">Morroccan</button>
-                        <button class="optionButtons button2">Irish</button>
+
+                        <div class="button2"> OK. How about any of these?</div>
+                        <div class="buttonsDiv">
+                            <button id="foodButton" class="optionButtons">American</button>
+                            <button id="foodButton" class="optionButtons">Fast Food</button>
+                            <button id="foodButton" class="optionButtons">Pizza</button>
+                            <button id="foodButton" class="optionButtons">Mexican</button>
+                            <button id="foodButton" class="optionButtons">Sandwich</button>
+                            <button id="foodButton" class="optionButtons">Italian</button>
+                            <button id="foodButton" class="optionButtons">Burger</button>
+                            <button id="foodButton" class="optionButtons">BBQ</button>
+                            <button id="foodButton" class="optionButtons button2">Azerbaijani</button>
+                            <button id="foodButton" class="optionButtons button2">French</button>
+                            <button id="foodButton" class="optionButtons button2">Middle Eastern</button>
+                            <button id="foodButton" class="optionButtons button2">Vietnamese</button>
+                            <button id="foodButton" class="optionButtons button2">Mediterranean</button>
+                            <button id="foodButton" class="optionButtons button2">Cantonese</button>
+                            <button id="foodButton" class="optionButtons button2">Morroccan</button>
+                            <button id="foodButton" class="optionButtons button2">Irish</button>
+                        </div>
+                        <div style="text-align: right;">
+                            <button class="optionButtons noneOption">None of these options sound good! >></button>
+                            <button class="optionButtons button2">Neither of these sound good either! >></button>
+                        </div>
                     </div>
                 </div>
-                <div style="text-align: right;">
-                    <button class="optionButtons noneOption">None of these options sound good! >></button>
-                    <button class="optionButtons button2">Neither of these sound good either! >></button>
-                </div>
+                
             </div>
             <div class="col-lg-2"></div>
         </div>
@@ -102,7 +105,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="java.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
