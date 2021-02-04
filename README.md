@@ -20,7 +20,7 @@ The concept of our website was built around a traveler visiting a town for the f
 
 This information gets pushed to the Zomato API and displays the restaurant results in individual cards, listing the name of the restaurant, phone number, hours, types of f ood and average cost for two.  It will also display links on the bottom.  The three links will take you to zomato's information page on the website, directions, and menu.  
 
-![restaurants image](./assets/images/restaurants.png)
+![restaurants image](./assets/images/restaurants.PNG)
 
 When you click the link for the address, it loads a page to a map that uses the Google Map Services API.  On initial load, it will show the location of the restaurant.  When you hit the 'Take me there' button, it will route the directions on the map and display turn by turn directions to the right.
 
